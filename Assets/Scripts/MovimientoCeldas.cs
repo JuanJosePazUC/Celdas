@@ -35,13 +35,14 @@ public class MovimientoCeldas : MonoBehaviour
         if ((input.x != 0 ^ input.y != 0) && !moviendo)
         {
             Vector2 puntoEvaluar = new Vector2(transform.position.x, transform.position.y) + offsetPuntoMovimiento + input;
-  
+
             if (!Physics2D.OverlapCircle(puntoEvaluar, radioCirculo, obstaculos))
             {
                 moviendo = true;
                 puntoMovimiento += input;
             }
         }
+
     }
 
     private void OnDrawGizmos()
